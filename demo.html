@@ -1,0 +1,31 @@
+<!doctype html>
+<head>
+    <title>ANVIL DEMO</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='demo.css') }}">
+</head>
+<body>
+{% if setuo %}
+    <h1>{{ actor }}</h1>
+    {% if not setup %}
+        <form action="/setup" method="post">
+            <button name="setup" type="submit">Connect to Sovrin</button>
+        </form>
+    {% endif %}
+    {% if setup %}
+        <form action="/connection_request" method="post">
+            <input name="name" placeholder="Name">
+            <input name="ip_address" placeholder="I.P. address">
+            <button name="connection_request" type="submit">Connect</button>
+        </form>
+        <br>
+        <form action="/reset">
+            <button name="reset" type="submit">Reset</button>
+        </form>
+    {% endif %}
+{% else %}
+    <h1>Server overloaded. Didn't think we'd be this popular &#128517;.</h1>
+    <h2><a href="https://www.github.com/OutlierVentures/ANVIL">Take a look at the code instead?</a></h2>
+{% endif %}
+</body>

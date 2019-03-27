@@ -27,6 +27,12 @@
             <button name="verify" type="submit">VERIFY</button>
         </form>
     {% endif %}
+    {% if not xyz %}
+        Token balance: {{ balance }}
+        <form action="/purchase" method="post">
+            <button name="purchase" type="submit">PURCHASE</button>
+        </form>
+    {% endif %}
 {% else %}
     <h1>Server overloaded. We didn't expect this much traffic.</h1>
     <form action="https://www.github.com/OutlierVentures/ANVIL" method="post">

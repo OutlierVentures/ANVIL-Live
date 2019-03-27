@@ -1,0 +1,8 @@
+{
+    "name" : "Car charging",
+    "description": "Electric car charging service.",
+    "attributes": {
+        "license": "Grounded Station",
+        "output": "22kW"
+    }
+}

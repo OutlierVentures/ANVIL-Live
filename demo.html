@@ -19,6 +19,14 @@
             <button name="issue" type="submit">ISSUE CREDENTIAL</button>
         </form>
     {% endif %}
+    {% if not xyz %}
+        <form action="/verify" method="post">
+            <input name="output" placeholder="0kW"></input><br>
+            <input name="grounded" placeholder="yes/no"></input><br>
+            <input name="firmware" placeholder="4.5"></input>
+            <button name="verify" type="submit">VERIFY</button>
+        </form>
+    {% endif %}
 {% else %}
     <h1>Server overloaded. We didn't expect this much traffic.</h1>
     <form action="https://www.github.com/OutlierVentures/ANVIL" method="post">

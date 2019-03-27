@@ -6,6 +6,7 @@ from sovrin.onboarding import demo_onboard
 from sovrin.schema import create_schema, create_credential_definition
 from sovrin.credentials import offer_credential, receive_credential_offer, request_credential, create_and_send_credential, store_credential
 from sovrin.proofs import request_proof_of_credential, create_proof_of_credential, verify_proof
+from fetch.agents import offer_service, purchase_service
 app = Quart(__name__)
 
 debug = False # Do not enable in production
@@ -64,6 +65,7 @@ async def issue():
     prover, issuer['authcrypted_cred_request'] = await request_credential(prover, cred_request)
     issuer, prover['authcrypted_cred'] = await create_and_send_credential(issuer)
     prover = await store_credential(prover)
+    offer_service(100, '../../charging_service')
     return redirect(url_for('index'))
 
 
@@ -126,6 +128,7 @@ async def verify():
 
 @app.route('/purchase', methods = ['GET', 'POST'])
 async def purchase():
+    purchase_service(101, 'license_output')
     # Reset
     return redirect(url_for('index'))
 

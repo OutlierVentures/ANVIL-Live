@@ -123,6 +123,9 @@ async def verify():
     }
     verifier = await verify_proof(verifier, assertions_to_make)
     # await teardown(pool_name, pool_handle, [steward, issuer, prover, verifier])
+    '''
+    TODO: redirect to demo_verified or demo_failed
+    '''
     return redirect(url_for('index'))
 
 

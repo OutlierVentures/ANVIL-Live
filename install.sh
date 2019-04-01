@@ -18,7 +18,7 @@ cp -a ./charging_service/. ./ANVIL/anvil/charging_service
 cp -a ./img/. ./ANVIL/anvil/img
 cd ANVIL
 ./scripts/install.sh
-pip3 install jupyter jupyterthemes
+sudo pip3 install jupyter jupyterthemes
 jt -t oceans16
 
-echo -e "${ongreen}ANVIL-Live installed."
+echo -e "${ongreen}ANVIL-Live installed.${endcolor}"

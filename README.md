@@ -1,6 +1,6 @@
 # ANVIL-Live
 
-Live demo of the ANVIL API for electric cars.
+Live code demo of the ANVIL API for electric cars.
 
 ## Requirements
 
@@ -8,21 +8,14 @@ Live demo of the ANVIL API for electric cars.
 
 ## Install
 
-1. Set up a firewall, allowing port `443`.
-2. Generate a certificate using e.g. LetsEncrypt's `certbot`. Set environment variables specifying the certificate's location:
-    ```
-    export PEM_FILE_PATH=
-    export KEY_FILE_PATH=
-    ```
-3. `./install.sh`
-4. In `ANVIL/anvil/setup.py` add the following before the line defining `_pool`:
+1. `./install.sh`
+2. In `ANVIL/anvil/setup.py` add the following before the line defining `_pool`:
     ```
     pool_list = await pool.list_pools()
     for pool_dict in pool_list:
         if pool_dict['pool'] == name:
             return name, 1
     ```
-4. Set a notebook password: `jupyter notebook password`
 
 
 ## Run
@@ -31,7 +24,11 @@ Start a Fetch.AI node and Sovrin node pool as specified in the ANVIL repo. Note 
 
 ```
 cd ANVIL/anvil
-screen
 jupyter notebook
 ```
-`CTRL + A`, `CTRL + D` to detach from the screen.
+
+# Host
+
+You can host the notebook by setting `c.NotebookApp.ip = '0.0.0.0'` in `.jupyter/jupyter_notebook_config.py`. Note that this grants anyone access to arbitrary code execution, so a precompiled mock alternative (below) is recommended. See [here](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html) for using a full live executable.
+
+Ther alternative is a HTML-ified notebook where you have the outputs prepared beforehand, and display them as the user 'runs' the notebook. See `demo.html` for this safe version.

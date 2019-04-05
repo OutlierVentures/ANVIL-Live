@@ -16458,7 +16458,8 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pool_name</span><span class="p">,</span> <span class="n">pool_handle</span><span class="p">,</span> <span class="n">steward</span><span class="p">,</span> <span class="n">issuer</span><span class="p">,</span> <span class="n">prover</span><span class="p">,</span> <span class="n">verifier</span> <span class="o">=</span> <span class="k">await</span> <span class="n">setup_demo</span><span class="p">()</span>
-<span class="n">steward</span><span class="p">,</span> <span class="n">issuer</span><span class="p">,</span> <span class="n">prover</span><span class="p">,</span> <span class="n">verifier</span> <span class="o">=</span> <span class="k">await</span> <span class="n">establish_channels_demo</span><span class="p">(</span><span class="n">steward</span><span class="p">,</span> <span class="n">issuer</span><span class="p">,</span> <span class="n">prover</span><span class="p">,</span> <span class="n">verifier</span><span class="p">)</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done.&#39;</span><span class="p">)</span>
+<span class="n">steward</span><span class="p">,</span> <span class="n">issuer</span><span class="p">,</span> <span class="n">prover</span><span class="p">,</span> <span class="n">verifier</span> <span class="o">=</span> <span class="k">await</span> <span class="n">establish_channels_demo</span><span class="p">(</span><span class="n">steward</span><span class="p">,</span> <span class="n">issuer</span><span class="p">,</span> <span class="n">prover</span><span class="p">,</span> <span class="n">verifier</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16534,7 +16535,8 @@ Done.
     <span class="s2">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="s2">&quot;firmware&quot;</span><span class="p">,</span> <span class="s2">&quot;grounded&quot;</span><span class="p">,</span> <span class="s2">&quot;license&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 <span class="n">unique_schema_name</span><span class="p">,</span> <span class="n">schema_id</span><span class="p">,</span> <span class="n">issuer</span> <span class="o">=</span> <span class="k">await</span> <span class="n">create_schema</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">issuer</span><span class="p">)</span>
-<span class="n">issuer</span> <span class="o">=</span> <span class="k">await</span> <span class="n">create_credential_definition</span><span class="p">(</span><span class="n">issuer</span><span class="p">,</span> <span class="n">schema_id</span><span class="p">,</span> <span class="n">unique_schema_name</span><span class="p">,</span> <span class="n">revocable</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Credential schema created.&#39;</span><span class="p">)</span>
+<span class="n">issuer</span> <span class="o">=</span> <span class="k">await</span> <span class="n">create_credential_definition</span><span class="p">(</span><span class="n">issuer</span><span class="p">,</span> <span class="n">schema_id</span><span class="p">,</span> <span class="n">unique_schema_name</span><span class="p">,</span> <span class="n">revocable</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Credential schema created.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16617,7 +16619,8 @@ Credential schema created.
 <span class="sd">The credential is stored in the charging station&#39;s wallet.</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="n">prover</span><span class="p">[</span><span class="s1">&#39;authcrypted_cred&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cred</span>
-<span class="n">prover</span> <span class="o">=</span> <span class="k">await</span> <span class="n">store_credential</span><span class="p">(</span><span class="n">prover</span><span class="p">)</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Credential stored in wallet.&#39;</span><span class="p">)</span>
+<span class="n">prover</span> <span class="o">=</span> <span class="k">await</span> <span class="n">store_credential</span><span class="p">(</span><span class="n">prover</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Credential stored in wallet.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16693,7 +16696,8 @@ Credential stored in wallet.
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">offer_service</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;./charging_service&#39;</span><span class="p">)</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charging service published on the OEF.&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">offer_service</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;./charging_service&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Charging service published on the OEF.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>

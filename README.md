@@ -31,6 +31,5 @@ jupyter notebook
 
 You can host the notebook by setting `c.NotebookApp.ip = '0.0.0.0'` in `.jupyter/jupyter_notebook_config.py`. Note that this grants anyone access to arbitrary code execution, so a precompiled mock alternative (below) is recommended. See [here](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html) for using a full live executable.
 
-The alternative is a HTML-ified notebook where you have the outputs prepared beforehand, and display them as the user 'runs' the notebook. See `demo.html` for this safe version.
+The alternative is a HTML-ified notebook where you have the outputs prepared beforehand, and display them as the user 'runs' the notebook. Just host `demo.html` (and the `img` folder) for this safe version.
 
-// TODO: button to show output on execution for each code cell.

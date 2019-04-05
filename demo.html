@@ -12948,10 +12948,10 @@ ul.typeahead-list  > li > a.pull-right {
     </style>
 <style type="text/css">
     .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+.highlight  { background: none }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
-.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .k { color: #6296df } /* Keyword */
 .highlight .o { color: #666666 } /* Operator */
 .highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
 .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
@@ -12969,16 +12969,16 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
 .highlight .gt { color: #0044DD } /* Generic.Traceback */
-.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kc { color: #6296df; font-weight: bold } /* Keyword.Constant */
 .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kn { color: #6296df } /* Keyword.Namespace */
 .highlight .kp { color: #008000 } /* Keyword.Pseudo */
 .highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
 .highlight .kt { color: #B00040 } /* Keyword.Type */
 .highlight .m { color: #666666 } /* Literal.Number */
 .highlight .s { color: #BA2121 } /* Literal.String */
 .highlight .na { color: #7D9029 } /* Name.Attribute */
-.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nb { color: #cdd2e9 } /* Name.Builtin */
 .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
 .highlight .no { color: #880000 } /* Name.Constant */
 .highlight .nd { color: #AA22FF } /* Name.Decorator */
@@ -12986,7 +12986,7 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
 .highlight .nf { color: #0000FF } /* Name.Function */
 .highlight .nl { color: #A0A000 } /* Name.Label */
-.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nn { color: #b38fff } /* Name.Namespace */
 .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
 .highlight .nv { color: #19177C } /* Name.Variable */
 .highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
@@ -13000,14 +13000,14 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
 .highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .sd { color: #79b379; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #79b379 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
 .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
 .highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
 .highlight .sx { color: #008000 } /* Literal.String.Other */
 .highlight .sr { color: #BB6688 } /* Literal.String.Regex */
-.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .s1 { color: #79b379 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
 .highlight .fm { color: #0000FF } /* Name.Function.Magic */
@@ -14740,6 +14740,7 @@ div.output_wrapper {
  margin-top: 0em;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
+ display: none;
 }
 div.output_subarea.output_text.output_stream.output_stdout,
 div.output_subarea.output_text {
@@ -15079,21 +15080,21 @@ div.rendered_html h5 {
 }
 .rendered_html h2,
 .text_cell_render h2 {
- color: #4c8be2 !important;
+ color: #7a4ae2 !important;
  font-size: 170%;
  font-style: normal;
  font-weight: normal;
 }
 .rendered_html h3,
 .text_cell_render h3 {
- color: #4c8be2 !important;
+ color: #7a4ae2 !important;
  font-size: 140%;
  font-style: normal;
  font-weight: normal;
 }
 .rendered_html h4,
 .text_cell_render h4 {
- color: #4c8be2 !important;
+ color: #7a4ae2 !important;
  font-size: 110%;
  font-style: normal;
  font-weight: normal;
@@ -16296,6 +16297,11 @@ div#maintoolbar {
  display: none !important;
 }
 
+html *
+{
+  font-weight: normal !important;
+}
+
 <script>
     MathJax.Hub.Config({
         "HTML-CSS": {
@@ -16381,7 +16387,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Build-a-trusted-machine-to-machine-negotiation-app-in-5-minutes">Build a trusted machine-to-machine negotiation app in 5 minutes<a class="anchor-link" href="#Build-a-trusted-machine-to-machine-negotiation-app-in-5-minutes">&#182;</a></h2><p><br></p>
+<h2 id="Build-a-trusted-machine-to-machine-negotiation-app-in-5-minutes">Build a machine-to-machine negotiation app in 5 minutes<a class="anchor-link" href="#Build-a-trusted-machine-to-machine-negotiation-app-in-5-minutes">&#182;</a></h2><p><br></p>
 <p>Ever wanted to make an app with cryptocurrency transfers, secure comms and zero-knowledge proofs?</p>
 <p>ANVIL lets you do just that in 5 minutes. Building on the Fetch.AI and Sovrin blockchains, the ANVIL API gives you access to powerful financial and cryptographic tools in an easy-to-understand Python package.</p>
 <p>In this guide, you will view and run code live. You'll learn how to build trusted, automated settlement between bots, humans and AI from scratch in just 5 minutes.</p>
@@ -16419,7 +16425,14 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
+<input id="buttona"type="button" value="&#9658;" />
+<script>
+$('#buttona').click(function() {
+  $('#runcodea').toggle('slow', function() {
+  });
+});
+</script>
+<div class="output_wrapper" id="runcodea">
 <div class="output">
 
 
@@ -16466,7 +16479,14 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
+<input id="buttonb"type="button" value="&#9658;" />
+<script>
+$('#buttonb').click(function() {
+  $('#runcodeb').toggle('slow', function() {
+  });
+});
+</script>
+<div class="output_wrapper" id="runcodeb">
 <div class="output">
 
 
@@ -16543,7 +16563,14 @@ Done.
 </div>
 </div>
 
-<div class="output_wrapper">
+<input id="buttonc"type="button" value="&#9658;" />
+<script>
+$('#buttonc').click(function() {
+  $('#runcodec').toggle('slow', function() {
+  });
+});
+</script>
+<div class="output_wrapper" id="runcodec">
 <div class="output">
 
 
@@ -16627,7 +16654,14 @@ Credential schema created.
 </div>
 </div>
 
-<div class="output_wrapper">
+<input id="buttond"type="button" value="&#9658;" />
+<script>
+$('#buttond').click(function() {
+  $('#runcoded').toggle('slow', function() {
+  });
+});
+</script>
+<div class="output_wrapper" id="runcoded">
 <div class="output">
 
 
@@ -16704,7 +16738,14 @@ Credential stored in wallet.
 </div>
 </div>
 
-<div class="output_wrapper">
+<input id="buttone"type="button" value="&#9658;" />
+<script>
+$('#buttone').click(function() {
+  $('#runcodee').toggle('slow', function() {
+  });
+});
+</script>
+<div class="output_wrapper" id="runcodee">
 <div class="output">
 
 
@@ -16819,7 +16860,14 @@ Credential stored in wallet.
 </div>
 </div>
 
-<div class="output_wrapper">
+<input id="buttonf"type="button" value="&#9658;" />
+<script>
+$('#buttonf').click(function() {
+  $('#runcodef').toggle('slow', function() {
+  });
+});
+</script>
+<div class="output_wrapper" id="runcodef">
 <div class="output">
 
 
@@ -16865,7 +16913,14 @@ Service purchased.
 </div>
 </div>
 
-<div class="output_wrapper">
+<input id="buttong"type="button" value="&#9658;" />
+<script>
+$('#buttong').click(function() {
+  $('#runcodeg').toggle('slow', function() {
+  });
+});
+</script>
+<div class="output_wrapper" id="runcodeg">
 <div class="output">
 
 
@@ -16889,7 +16944,7 @@ Interaction complete.
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Next-steps">Next steps<a class="anchor-link" href="#Next-steps">&#182;</a></h2><p><br></p>
-<p>You now know how to build a trusted machine-to-machine negotiation app.</p>
+<p>You now know how to build a machine-to-machine negotiation app.</p>
 <p>You can:</p>
 <ul>
 <li><a href="https://github.com/OutlierVentures/ANVIL">Get building</a>,</li>
